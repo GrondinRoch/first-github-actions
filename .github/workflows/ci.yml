@@ -1,0 +1,20 @@
+name: Exploration GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Execution tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperation de code
+        run: echo "Recuperation de code"
+      - name: Installation Node.js
+        run: echo "Installation Node.js"
+      - name: Installation dependences
+        run: echo "Installation dependences"
+      - name: Execution tests
+        run: echo "Execution tests"
