@@ -18,3 +18,16 @@ jobs:
         run: echo "Installation dependences"
       - name: Execution tests
         run: echo "Execution tests"
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperation de code
+        run: echo "Recuperation de code"
+      - name: Installation Node.js
+        run: echo "Installation Node.js"
+      - name: Installation dependences
+        run: echo "Installation dependences"
+      - name: Build
+        run: echo "Build"
