@@ -18,7 +18,6 @@ jobs:
         run: echo "Installation dependences"
       - name: Execution tests
         run: echo "Execution tests"
-jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
