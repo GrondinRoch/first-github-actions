@@ -21,6 +21,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    # avec needs, on indique que ce job doit attendre la fin du job test pour se lancer
+    needs: test
     steps:
       - name: Recuperation de code
         run: echo "Recuperation de code"
@@ -30,3 +32,15 @@ jobs:
         run: echo "Installation dependences"
       - name: Build
         run: echo "Build"
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    # avec needs, on indique que ce job doit attendre la fin du job build pour se lancer
+    needs: build 
+    steps:
+      - name: Connexion au serveur        
+        run: echo "Connexion au serveur"
+      - name: Mise en route du serveur        
+        run: echo "Mise en route du serveur"
+      - name: Deploy
+        run: echo "Deploy"
